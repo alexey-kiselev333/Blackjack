@@ -1,0 +1,1 @@
+#an interesting game easy rules
