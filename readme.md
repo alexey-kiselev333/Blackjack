@@ -1,1 +1,2 @@
-#An interesting game with easy rules
+# An interesting game with easy rules
+

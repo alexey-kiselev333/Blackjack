@@ -4,13 +4,15 @@ from Deck import Deck
 
 class AbstractPlayer(abc.ABC):
 
-    def __init__(self):
+    def __init__(self,position):
         self.cards=[]
-
+        self.position = position
 
 
     def ask_card(self):
-        pass
+        card = deck.get_card()
+        self.cards.append(card)
+        return True
 
 class Player(AbstractPlayer):
     pass
