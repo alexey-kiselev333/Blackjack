@@ -31,6 +31,8 @@ PRINTED={
 *********""",
 }
 
-MESSAGES={
-    'ask_start':'Want to play(y/n)'
+MESSAGES = {
+    'ask_start':'Want to play(y/n) '
 }
+
+NAMES = ['John','Jack','Vasya','Ivan']
