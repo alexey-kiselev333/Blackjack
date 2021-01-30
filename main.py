@@ -1,13 +1,20 @@
 from Deck import Deck
 from Game import Game
 
-if __name__== '__main__':
+
+from Player import Bot
+
+if __name__ == '__main__':
     g = Game()
     g.start_game()
 
-    for pl in g.players:
-        print(pl)
-    # print(len(d))
-    # card = d.get_card()
-    # print(card)
-    # print(len(d))
+    print(g.player.money)
+
+
+    # print('\n\nDONE')
+    #
+    # for pl in g.players:
+    #     pl.print_cards()
+    #     if isinstance(pl, Bot):
+    #         print('Max points: ', pl.max_points)
+    #     print('*********')

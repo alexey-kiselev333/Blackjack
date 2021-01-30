@@ -1,35 +1,39 @@
-from const import PRINTED,SUITS,RANKS
 from itertools import product
-
 from random import shuffle
+
+from const import PRINTED, SUITS, RANKS
+
+
 class Card:
 
-    def __init__(self, suit,rank,picture,points):
-        self.suit=suit
-        self.rank=rank
-        self.picture=picture
-        self.points=points
+    def __init__(self, suit, rank, picture, points):
+        self.suit = suit
+        self.rank = rank
+        self.picture = picture
+        self.points = points
 
     def __str__(self):
-        message ='\nPoints: '+str(self.points)
+        message = self.picture + '\nPoints: ' + str(self.points)
         return message
+
+
 class Deck:
 
     def __init__(self):
-        self.cards=self._generate_deck()
+        self.cards = self._generate_deck()
         shuffle(self.cards)
 
     def _generate_deck(self):
-        cards=[]
+        cards = []
         for suit, rank in product(SUITS, RANKS):
-            if rank=='ace':
-                points=11
+            if rank == 'ace':
+                points = 11
             elif rank.isdigit():
-                points=int(rank)
+                points = int(rank)
             else:
-                points=10
-            picture=PRINTED.get(rank)
-            c=Card(suit=suit, rank=rank, points=points, picture=picture)
+                points = 10
+            picture = PRINTED.get(rank)
+            c = Card(suit=suit, rank=rank, points=points, picture=picture)
             cards.append(c)
         return cards
 
